@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShyCube : MonoBehaviour 
+public class ShyCubeTest : MonoBehaviour 
 {
 	public Transform player;
-
-	public Transform location;
 
 	public Transform cube;
 
@@ -23,10 +21,9 @@ public class ShyCube : MonoBehaviour
 	{
 		if (player)
 		{
-			float d = Vector3.Distance(player.position, location.position);
+			float d = Vector3.Distance(player.position, transform.position);
 			print("Distance to player: " + d);
 			float scale = d / max;
-			print(scale);
 			cube.localScale = new Vector3(scale, scale, scale);
 		}
 	}
