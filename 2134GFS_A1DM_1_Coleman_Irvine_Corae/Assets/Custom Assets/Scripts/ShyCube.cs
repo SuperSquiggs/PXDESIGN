@@ -7,7 +7,7 @@ public class ShyCube : MonoBehaviour
 
 	public Transform location;
 
-	public Transform cube;
+	public Transform cube, cube2, cube3, cube4, cube5;
 
 	public float max;
 
@@ -28,6 +28,10 @@ public class ShyCube : MonoBehaviour
 			float scale = d / max;
 			print(scale);
 			cube.localScale = new Vector3(scale, scale, scale);
+			cube2.localScale = new Vector3(scale, scale, scale);
+			cube3.localScale = new Vector3(scale, scale, scale);
+			cube4.localScale = new Vector3(scale, scale, scale);
+			cube5.localScale = new Vector3(scale, scale, scale);
 		}
 	}
 }
