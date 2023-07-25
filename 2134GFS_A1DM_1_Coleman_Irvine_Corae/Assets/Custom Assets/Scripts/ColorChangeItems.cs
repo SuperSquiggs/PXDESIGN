@@ -3,9 +3,9 @@ using System.Collections;
 
 public class ColorChangeItems : MonoBehaviour 
 {
-	private int r;
-	private int g;
-	private int b;
+	private float redF;
+	private float greenF;
+	private float blueF;
 
 	// An alternate set of numbers with a different behaviour
 	//private float redF;
@@ -21,15 +21,15 @@ public class ColorChangeItems : MonoBehaviour
 
 	void OnMouseEnter()
 	{
-        // Ideally there should be a range limit on this interaction to prevent it activating from long distances. 
-        // Use distance check between player and this object. 
-        //
-        // Reticle also should have a range indicator to suggest the interaction is possible but inactive. 
-        // Try getting UI image components for out of range / in range, and activate / deactivate them accordingly.
+		// Ideally there should be a range limit on this interaction to prevent it activating from long distances. 
+		// Use distance check between player and this object. 
+		//
+		// Reticle also should have a range indicator to suggest the interaction is possible but inactive. 
+		// Try getting UI image components for out of range / in range, and activate / deactivate them accordingly.
 
-        r = Random.Range(0, 2);
-		g = Random.Range(0, 2);
-		b = Random.Range(0, 2);
+		redF = Random.Range(0.3f, 1.0f);
+		greenF = Random.Range(0.3f, 1.0f);
+		blueF = Random.Range(0.3f, 1.0f);
 
 		// Alternate numbers 
 		//redF = Random.Range(0.3f, 1.0f);
@@ -42,8 +42,8 @@ public class ColorChangeItems : MonoBehaviour
 
 	void OnMouseOver()
 	{
-		Debug.Log(r + " " + g + " " + b);
-		rend.material.color -= new Color(r, g, b) * Time.deltaTime;
+		Debug.Log(redF + " " + greenF + " " + blueF);
+		rend.material.color -= new Color(redF, greenF, blueF) * Time.deltaTime;
 
 		//Debug.Log(redF + " " + greenF + " " + blueF);
 		//rend.material.color -= new Color(redF, greenF, blueF) * Time.deltaTime;
