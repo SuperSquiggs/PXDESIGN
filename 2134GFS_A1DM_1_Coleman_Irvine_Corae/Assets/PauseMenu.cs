@@ -45,6 +45,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        Debug.Log("Loading menu...");
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -52,5 +53,10 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Exiting Game");
         Application.Quit();
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
